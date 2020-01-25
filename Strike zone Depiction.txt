@@ -1,0 +1,20 @@
+# Show the difference between a Left Handed Hitter and Right Handed Hitter
+
+# Subset out all outputs of 0 in the calledstrike column. 1 = TRUE, 0 = FALSE
+# If the output is 0 then the ball was not caught by the catcher for a strike therefore will not help in determining the strike zone
+
+called_strike <- subset(catcherframe, calledstrike < 0)
+
+# You can uses the ggplot function to create the strike zone for both left handed and right handed hitters.
+# X and Y coordinates are the plate_x and plate_z columns but they're  seperated by the batside of the hitter.
+# You then can choose the density to which you would like to make apparent in the graph
+# Through geom_rect() you can map out the strike zone to the proper size.
+# Then through the facet_wrap() you can place both charts side by side to show the difference fairly easily.
+
+ggplot(called_strike, aes(plate_x, plate_z, col= batside)) + 
++     geom_density2d(aes_string(x="plate_x", y="plate_z"), 
++                    bins=100, size=1.4) + 
++     geom_rect(mapping = aes(ymax = 3.6, ymin = 1.6, 
++                             xmax = -1.2, xmin = 1.2), alpha = 0, size=1.2,
++               colour = "black") +
++     facet_wrap(~batside)
