@@ -20,4 +20,4 @@ ggplot(called_strike, aes(plate_x, plate_z, col= batside)) +
 +     facet_wrap(~batside)
 
 
-The above photo shows the difference between a right handed batters’ strike zone and a left handed batters’ strike zone.   As you can see most strikes were called lower than higher and on the outside part of the plate for both batter sides.  This shows that pitchers should attempt to throw more on the outside part of the plate to see better results and in turn batters should expect more pitches to be on the outside third of the plate.  
+# The above photo shows the difference between a right handed batters' strike zone and a left handed batters' strike zone.   As you can see most strikes were called lower than higher and on the outside part of the plate for both batter sides.  This shows that pitchers should attempt to throw more on the outside part of the plate to see better results and in turn batters should expect more pitches to be on the outside third of the plate.  
