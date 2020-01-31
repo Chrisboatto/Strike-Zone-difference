@@ -1,5 +1,17 @@
 # Show the difference between a Left Handed Hitter and Right Handed Hitter
 
+install.packages("devtools")
+install.packages("dplyr")
+install.packages("ggplot2")
+
+library(devtools)
+library(ggplot2)
+library(dplyr)
+
+# Importing Data
+
+devtools::install_github("Chrisboatto/Strike-Zone-difference/catcherframe")
+
 # Subset out all outputs of 0 in the calledstrike column. 1 = TRUE, 0 = FALSE
 # If the output is 0 then the ball was not caught by the catcher for a strike therefore will not help in determining the strike zone
 
