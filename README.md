@@ -16,7 +16,7 @@ To begin the assignment you will first need to download the data set from the Gi
 
 `library(devtools)`
 
-`devtools::install_github("Chrisboatto/Strike-Zone-difference")`
+`devtools::install_github("Chrisboatto/Strike-Zone-difference/catcherframe.csv")`
 
 
 
